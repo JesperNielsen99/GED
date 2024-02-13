@@ -7,31 +7,31 @@ public class V2 {
         this.x = x;
         this.y = y;
     }
-    double length() {
+    public double length() {
         return Math.sqrt(x*x+y*y);
     }
 
-    V2 add(V2 v) {
+    public V2 add(V2 v) {
         return new V2((x+v.x), (y+v.y));
     }
 
-    V2 sub(V2 v) {
+    public V2 sub(V2 v) {
         return new V2((x-v.x), (y-v.y));
     }
 
-    V2 mul(double s) {
+    public V2 mul(double s) {
         return new V2((x*s), (y*s));
     }
 
-    V2 cross() {
+    public V2 cross() {
         return new V2(y*-1, x);
     }
 
-    double distance(V2 v) {
+    public double distance(V2 v) {
         return Math.sqrt((Math.pow((v.x-x), 2))+(Math.pow((v.y-y), 2)));
     }
 
-    double scalar(V2 v) {
+    public double scalar(V2 v) {
         return (x*v.x+y*v.y);
     }
 

@@ -65,5 +65,6 @@ public class S2 {
         }
         drawString(g,"x", new V2(0, xLength+0.3));
         drawString(g,"y", new V2(yLenght+0.3, 0));
+
     }
 }

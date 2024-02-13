@@ -11,11 +11,11 @@ public class M2 {
         this.d = d;
     }
 
-    V2 mul(V2 v) {
+    public V2 mul(V2 v) {
         return new V2(a *v.x+ b *v.y, c *v.x+ d *v.y);
     }
 
-    M2 mul(M2 m) {
+    public M2 mul(M2 m) {
         return new M2(a*m.a + b*m.c, a*m.b + b*m.d, c*m.a + d*m.c, c*m.b + d*m.d);
     }
 

@@ -3,7 +3,6 @@ import Mathematical_Engine.V2;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.Random;
 
 public class GraphicsApp2 extends JFrame {
     public static void main(String[] args) {
@@ -23,7 +22,8 @@ public class GraphicsApp2 extends JFrame {
     class DrawPanel extends JPanel {
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
-            s.drawLine(g, new V2(0,0), new V2(1,2));
+            V2 test1 = new V2(1,2);
+            s.drawLine(g, new V2(0,0), test1);
             s.drawAxis(g, 5, 5);
             s.drawPoint(g, new V2(4,2), 10);
             g.setColor(Color.blue);
