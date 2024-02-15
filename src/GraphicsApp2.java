@@ -23,11 +23,10 @@ public class GraphicsApp2 extends JFrame {
         protected void paintComponent(Graphics g) {
             super.paintComponent(g);
             V2 test1 = new V2(1,2);
-            s.drawLine(g, new V2(0,0), test1);
-            s.drawAxis(g, 5, 5);
-            s.drawPoint(g, new V2(4,2), 10);
-            g.setColor(Color.blue);
-            s.drawRect(g, new V2(0,0), new V2(2,4));
+            s.drawLine(g, new V2(0,0), test1, Color.BLACK);
+            s.drawAxis(g, 5, 5, true, Color.red);
+            s.drawPoint(g, new V2(4,2), 10, Color.BLACK);
+            s.drawRect(g, new V2(0,0), new V2(2,4), Color.BLUE);
         }
     }
 }
