@@ -1,4 +1,5 @@
-package Mathematical_Engine;
+import Mathematical_Engine.S2;
+import Mathematical_Engine.V2;
 
 import javax.swing.*;
 import java.awt.*;

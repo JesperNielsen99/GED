@@ -1,12 +1,23 @@
 package Mathematical_Engine;
 
 public class V2 {
-    double x, y;
+    public double x, y;
 
     public V2(double x, double y) {
         this.x = x;
         this.y = y;
     }
+
+    public V2(V2[] vectors) {
+        double sumX = 0, sumY = 0;
+        for(V2 v: vectors) {
+            sumX += v.x;
+            sumY += v.y;
+        }
+        this.x = sumX / vectors.length;
+        this.y = sumY / vectors.length;
+    }
+
     public double length() {
         return Math.sqrt(x*x+y*y);
     }
@@ -37,20 +48,5 @@ public class V2 {
 
     public String toString() {
         return "(" + x + ", " + y + ")";
-    }
-
-    public static void main(String[] args) {
-        V2 v1 = new V2(1,2);
-        V2 v2 = new V2(3,5);
-        System.out.println("v1 = " + v1);
-        System.out.println("v2 = " + v2);
-        System.out.println("v1 Length: " + v1.length());
-        System.out.println("v1+v2 = " + v1.add(v2));
-        System.out.println("v1+v2 Length = " + v1.add(v2).length());
-        System.out.println("v1-v2 = " + v1.sub(v2));
-        System.out.println("v1-v2 Length = " + v1.sub(v2).length());
-        System.out.println("v1+v2 Skalar = " + v1.scalar(v2));
-        System.out.println("v1*2 = " + v1.mul(2));
-        System.out.println("v1*2 Length = " + v1.mul(2).length());
     }
 }
