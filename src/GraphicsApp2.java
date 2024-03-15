@@ -25,7 +25,7 @@ public class GraphicsApp2 extends JFrame {
             V2 test1 = new V2(1,2);
             s.drawLine(g, new V2(0,0), test1, Color.BLACK);
             s.drawAxis(g, 5, 5, true, Color.red);
-            s.drawPoint(g, new V2(4,2), 10, Color.BLACK);
+            s.drawPoint(g, new V2(4,2), Color.BLACK, 10);
             s.drawRect(g, new V2(0,0), new V2(2,4), Color.BLUE);
         }
     }

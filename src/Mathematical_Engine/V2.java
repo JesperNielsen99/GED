@@ -34,6 +34,8 @@ public class V2 {
         return new V2((x*s), (y*s));
     }
 
+    public V2 div(double s) { return new V2((x/s), (y/s)); }
+
     public V2 cross() {
         return new V2(y*-1, x);
     }
@@ -42,8 +44,15 @@ public class V2 {
         return Math.sqrt((Math.pow((v.x-x), 2))+(Math.pow((v.y-y), 2)));
     }
 
-    public double scalar(V2 v) {
+    public double dot(V2 v) {
         return (x*v.x+y*v.y);
+    }
+
+    public V2 unit() {
+        if (length() != 0) {
+            return new V2(x/length(), y/length());
+        }
+        return this;
     }
 
     public String toString() {

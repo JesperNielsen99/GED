@@ -30,11 +30,11 @@ public class LinexEllipse extends JFrame {
             s.drawAxis(g, 10, 10, true, Color.RED);
             for (double v =0; v<2* Math.PI; v+=0.01) {                          //vinkel er parameter
                 V2 p = p0.add(new V2(a* Math.cos(v), b* Math.sin(v)));    //punkter på ellipse
-                s.drawPoint(g, p, 3, Color.BLUE);
+                s.drawPoint(g, p, Color.BLUE, 3);
             }
             for (double k=0; k<5; k+=0.01) {                                    //k er parameter i parameterfremstilling
                 V2 q = q0.add(new V2(1, m).mul(k));                          //nye punkter på linien
-                s.drawPoint(g, q, 3, Color.BLACK);
+                s.drawPoint(g, q, Color.BLACK, 3);
             }
         }
     }

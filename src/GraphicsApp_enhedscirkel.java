@@ -42,7 +42,7 @@ public class GraphicsApp_enhedscirkel extends JFrame {
                 s.drawPoint(g, new V2(x,y), 2, Color.BLACK);
             }*/
             for(int i=0; i<n; i++) {
-                s.drawPoint(g, points[i], 3, Color.BLACK);
+                s.drawPoint(g, points[i], Color.BLACK, 3);
                 int j = (i+n/2)%n;
                 s.drawLine(g, points[i], points[j], Color.BLACK);
             }
