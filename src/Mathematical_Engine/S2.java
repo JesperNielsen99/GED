@@ -117,6 +117,11 @@ public class S2 {
         g.drawOval((int) pixelValuep1.x, (int) pixelValuep1.y, width, height);
     }
 
+    public void drawAxis(Graphics g) {
+        drawLine(g, origo, new V2(origo.x+1, origo.y), Color.BLACK);
+        drawLine(g, origo, new V2(origo.x, origo.y+1), Color.BLACK);
+    }
+
     public void drawAxis(Graphics g, int xLength, int yLength, boolean details , Color color) {
         drawGrid(g, xLength, yLength, Color.lightGray);
         drawLine(g, origo, new V2(origo.x+xLength, origo.y), color);
