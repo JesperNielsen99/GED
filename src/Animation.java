@@ -44,7 +44,7 @@ public class Animation extends JFrame {
 
         double textScrollSpeed = 0.1;
 
-        double x = textX;
+        double x;
 
         boolean textVisible = true;
 
@@ -173,8 +173,8 @@ public class Animation extends JFrame {
             // Check if any part of the text crosses the vertical boundaries of the square
             FontMetrics fm = g.getFontMetrics(new Font("Arial", Font.PLAIN, 65));
             int textWidth = fm.stringWidth(text) / 100;
-            if (x < textWidth) {
-                x += textWidth;
+            if (x < textWidth || x > maxX) {
+                x = textX + textWidth;
             }
             //S.drawString(g, text, new V2(textX, 0.51), Color.RED, new Font("Arial", Font.PLAIN, 65));
             x += textScrollSpeed;
@@ -211,11 +211,13 @@ public class Animation extends JFrame {
             // Draw text at the updated x-coordinate
             S.drawString(g, textFront, new V2(textX, 0.51), Color.RED, new Font("Arial", Font.PLAIN, 65));
 
-            // Calculate the position to start drawing the text behind the square
-            double textBehindX = textX + textWidthFront; // Start from where the visible portion ends
-
             // Draw the text behind the square
-            S.drawString(g, textBehind, new V2(0.5, 0.51), Color.BLUE, new Font("Arial", Font.PLAIN, 65));
+            if (textBehind.equals(text)) {
+                textX = 0.5;
+                S.drawString(g, textBehind, new V2(0.51+textX, 0.51), Color.RED, new Font("Arial", Font.PLAIN, 65));
+            } else {
+                S.drawString(g, textBehind, new V2(0.5, 0.51), Color.RED, new Font("Arial", Font.PLAIN, 65));
+            }
 
         }
 
