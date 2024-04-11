@@ -1,3 +1,5 @@
+package S2_programs;
+
 import java.awt.*;
 import java.util.Random;
 import javax.swing.*;
@@ -6,7 +8,7 @@ public class GraphicsApp extends JFrame {
     public static void main(String[] args) {
         JFrame frame = new GraphicsApp();
         frame.setSize(700,700);
-        frame.setTitle("GraphicsApp");
+        frame.setTitle("S2_programs.GraphicsApp");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

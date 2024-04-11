@@ -1,3 +1,5 @@
+package S2_programs;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -5,7 +7,7 @@ public class PolyShapes extends JFrame {
     public static void main(String[] args) {
         JFrame frame = new PolyShapes();
         frame.setSize(700,700);
-        frame.setTitle("PolyShapes");
+        frame.setTitle("S2_programs.PolyShapes");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

@@ -1,3 +1,5 @@
+package S2_programs;
+
 import Mathematical_Engine.M2;
 import Mathematical_Engine.S2;
 import Mathematical_Engine.V2;
@@ -11,7 +13,7 @@ import static java.lang.Math.*;
 public class RotateSquareAnimation extends JFrame {
     public static void main(String[] args) {
         RotateSquareAnimation frame=new RotateSquareAnimation();
-        frame.setTitle("RotateSquareAnimation");
+        frame.setTitle("S2_programs.RotateSquareAnimation");
         frame.setSize(1000, 700);
         frame.setLocationRelativeTo(null); // Center the frame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -1,3 +1,5 @@
+package S2_programs;
+
 import Mathematical_Engine.M2;
 import Mathematical_Engine.S2;
 import Mathematical_Engine.V2;
@@ -13,7 +15,7 @@ public class Animation extends JFrame {
     public static void main(String[] args) {
         JFrame frame = new Animation();
         frame.setSize(700, 700);
-        frame.setTitle("Animation");
+        frame.setTitle("S2_programs.Animation");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

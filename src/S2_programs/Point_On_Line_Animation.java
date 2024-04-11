@@ -1,3 +1,5 @@
+package S2_programs;
+
 import Mathematical_Engine.V2;
 import Mathematical_Engine.S2;
 
@@ -28,7 +30,7 @@ public class Point_On_Line_Animation extends JFrame {
         double t0;                       // Timestamp of simulation start in sec
         double t=0;                      // Time in sec since simulation start
 
-        // Animation
+        // S2_programs.Animation
         int frameRate=25;                // No of frames/second
         int frameDelay = 1000/frameRate; // time between frames in milli sec
         Timer myTimer=new Timer(frameDelay, new TimerListener());

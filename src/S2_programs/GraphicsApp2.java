@@ -1,3 +1,5 @@
+package S2_programs;
+
 import Mathematical_Engine.S2;
 import Mathematical_Engine.V2;
 
@@ -8,7 +10,7 @@ public class GraphicsApp2 extends JFrame {
     public static void main(String[] args) {
         JFrame frame = new GraphicsApp2();
         frame.setSize(700,700);
-        frame.setTitle("GraphicsApp");
+        frame.setTitle("S2_programs.GraphicsApp");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);

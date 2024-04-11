@@ -1,4 +1,5 @@
-import Mathematical_Engine.M2;
+package S2_programs;
+
 import Mathematical_Engine.S2;
 import Mathematical_Engine.V2;
 

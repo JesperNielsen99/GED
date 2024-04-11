@@ -1,11 +1,11 @@
+package S2_programs;
+
 import Mathematical_Engine.M2;
 import Mathematical_Engine.S2;
 import Mathematical_Engine.V2;
 
 import javax.swing.*;
 import java.awt.*;
-
-import static java.lang.Math.*;
 
 public class TwoD_Transformation extends JFrame {
     public static void main(String[] args) {
