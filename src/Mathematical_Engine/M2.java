@@ -35,7 +35,7 @@ public class M2 {
     public M2 inv() { return adj().mul(1/det()); }
 
     public String toString() {
-        return  "(" + a + ", " + b + ")" + "\n" +
-                "(" + c + ", " + d + ")";
+        return  "[(" + a + ", " + b + ")]" + "\n" +
+                "[(" + c + ", " + d + ")]";
     }
 }

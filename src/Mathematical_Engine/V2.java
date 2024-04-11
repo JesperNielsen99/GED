@@ -56,6 +56,6 @@ public class V2 {
     }
 
     public String toString() {
-        return "(" + x + ", " + y + ")";
+        return "[" + x + ", " + y + "]";
     }
 }
