@@ -81,9 +81,8 @@ public class RotateCubeAnimationCameraFloatingAround extends JFrame {
             //cam.moveTo(newCam);
             //cam.focus(C);
             //cam.yaw(1);
-            cam.pitch(1);
+            //cam.pitch(1);
             //cam.roll(1);
-            //cam.yaw(180);
             cam.drawAxis(g);
             cam.drawLine(g, cube[0], cube[1]);
             cam.drawLine(g, cube[1], cube[3]);

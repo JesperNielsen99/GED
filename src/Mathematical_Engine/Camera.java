@@ -17,6 +17,9 @@ public class Camera {
     double z = 2;
 
     S2 s2;
+    M3 I = new M3(1,0,0,
+                  0,1,0,
+                  0,0,1);
 
     public Camera(int Sx, int Sy, int Ox, int Oy) {
         s2 = new S2(Sx, Sy, Ox, Oy);
@@ -80,38 +83,32 @@ public class Camera {
         s2.drawLine(g, project(p1), project(p2), color, weight);
     }
 
-    M3 I = new M3(1,0,0,
-                  0,1,0,
-                  0,0,1);
-    M3 Sz3 = new M3( 0, -1, 1,
-            1, 0, -1,
-            -1, 1, 0);
-
     public void yaw(double angle) {
-        //SZ3*U
-        M3 Sx = null;
-        double phi = (PI/180)*angle;
+        M3 Sx=new M3(0,-1, 0,
+                1, 0, 0,
+                0, 0, 0);
+        double phi = (PI/360)*angle;
         M3 Rx = I.add(Sx.mul(sin(phi))).add(Sx.mul(Sx).mul(1-cos(phi)));
         D = Rx.mul(D).unit();
         R = D.cross(k).unit();
         U = R.cross(D);
     }
 
-    //NONE OF THE BELOW IS DONE.
-    public void pitch(double angle) {
-       //SZ3*D
-        M3 Sz = null;
-        double phi = (PI/180)*angle;
+    public void roll(double angle) {
+        M3 Sz = new M3( 0, 0, 0,
+                      0, 0, -1,
+                      0, 1, 0);
+        double phi = (PI/360)*angle;
         M3 Rz = I.add(Sz.mul(sin(phi))).add(Sz.mul(Sz).mul(1-cos(phi)));
         U = Rz.mul(U);
         R = Rz.mul(R);
-        //D = R.cross(U);
     }
 
-    public void roll(double angle) {
-        //SZ3*R
-        M3 Sy = null;
-        double phi = (PI/180)*angle;
+    public void pitch(double angle) {
+        M3 Sy = new M3( 0, 0, 1,
+                0, 0, 0,
+                -1, 0, 0);
+        double phi = (PI/360)*angle;
         M3 Ry = I.add(Sy.mul(sin(phi))).add(Sy.mul(Sy).mul(1-cos(phi)));
         R = Ry.mul(R);
         U = Ry.mul(U);
