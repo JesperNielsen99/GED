@@ -13,7 +13,7 @@ import static java.lang.Math.*;
 
 public class RotateCubeAnimationCamera extends JFrame {
     public static void main(String[] args) {
-       RotateCubeAnimationCamera frame=new RotateCubeAnimationCamera();
+       ImportProgram frame=new ImportProgram();
         frame.setTitle("S2_programs.RotateSquareAnimation");
         frame.setSize(1000, 700);
         frame.setLocationRelativeTo(null); // Center the frame
